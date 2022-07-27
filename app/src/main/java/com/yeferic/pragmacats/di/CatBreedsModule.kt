@@ -1,6 +1,8 @@
 package com.yeferic.pragmacats.di
 
 import com.yeferic.pragmacats.common.Constants
+import com.yeferic.pragmacats.data.repository.CatsBreedsRepositoryImp
+import com.yeferic.pragmacats.data.source.remote.RemoteService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -46,6 +48,18 @@ class CatBreedsModule {
     @Singleton
     fun providesRxJavaCallAdapterFactory(): RxJava2CallAdapterFactory {
         return RxJava2CallAdapterFactory.create()
+    }
+
+    @Provides
+    @Singleton
+    fun providesRemoteService(retrofit: Retrofit): RemoteService {
+        return retrofit.create(RemoteService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun providesCatsBreedsRepositoryImp(remoteService: RemoteService): CatsBreedsRepositoryImp{
+        return CatsBreedsRepositoryImp(remoteService)
     }
 
 }
