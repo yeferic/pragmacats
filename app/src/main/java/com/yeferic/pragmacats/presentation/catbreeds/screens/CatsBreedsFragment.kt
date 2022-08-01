@@ -76,8 +76,8 @@ class CatsBreedsFragment : Fragment() , IOnCatsBreedsAdapterListener {
         binding.txtFilter.setOnEditorActionListener { _, actionId, _ ->
             when (actionId) {
                 EditorInfo.IME_ACTION_SEARCH -> {
-                    //TODO Filter
                     viewModel.filterText.value = binding.txtFilter.text.toString()
+                    viewModel.filterBreedsList()
                     true
                 }
                 else -> false
@@ -87,6 +87,7 @@ class CatsBreedsFragment : Fragment() , IOnCatsBreedsAdapterListener {
         binding.btnSearch.setOnClickListener { _ ->
             //TODO
             viewModel.filterText.value = binding.txtFilter.text.toString()
+            viewModel.filterBreedsList()
         }
     }
 

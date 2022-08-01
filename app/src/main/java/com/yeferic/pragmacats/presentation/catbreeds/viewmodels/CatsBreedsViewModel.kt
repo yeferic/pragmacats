@@ -17,6 +17,7 @@ class CatsBreedsViewModel @Inject constructor(
     val lsBreeds = MutableLiveData<List<Breed>>()
     val loading = MutableLiveData<Boolean>()
     val filterText = MutableLiveData<String>()
+    lateinit var lsFromService : List<Breed>
 
     init {
         loading.value = false
@@ -30,11 +31,18 @@ class CatsBreedsViewModel @Inject constructor(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                lsBreeds.value = it
+                //lsBreeds.value = it
+                lsFromService = it
+                filterBreedsList()
                 loading.value = false
             }, {
                 it.printStackTrace()
                 loading.value = false
             })
+    }
+
+    fun filterBreedsList(){
+        if(filterText.value == null || filterText.value!!.isEmpty()) lsBreeds.value = lsFromService
+        else lsBreeds.value = lsFromService?.filter { b -> b.name.lowercase().contains(filterText.value!!.lowercase()) }
     }
 }
