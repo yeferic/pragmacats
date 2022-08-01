@@ -4,8 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
-import com.yeferic.pragmacats.presentation.catbreeds.screens.CatBreedsView
+import com.yeferic.pragmacats.presentation.catbreeds.screens.CatBreedsMainView
 import kotlinx.coroutines.*
 
 @SuppressLint("CustomSplashScreen")
@@ -19,7 +18,7 @@ class SplashScreen : AppCompatActivity() {
 
         scope.launch {
             delay(3000)
-            val intent = Intent(this@SplashScreen, CatBreedsView::class.java)
+            val intent = Intent(this@SplashScreen, CatBreedsMainView::class.java)
             startActivity(intent)
             finish()
         }

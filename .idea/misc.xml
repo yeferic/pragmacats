@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/drawable/ic_arrow_back.xml" value="0.314" />
         <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5435" />
         <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.5435" />
         <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/drawable/icon_cat.xml" value="0.5435" />
+        <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/drawable/icon_search.xml" value="0.5435" />
+        <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/drawable/input_style.xml" value="0.5425" />
+        <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/layout/breed_item_list.xml" value="0.5489583333333333" />
+        <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/layout/fragment_cats_breeds.xml" value="0.5359375" />
+        <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
         <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/layout/screen_cat_breeds.xml" value="0.55" />
         <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/layout/screen_splash.xml" value="0.55" />
         <entry key="..\:/Users/Yeferic/Documents/AzureDevOps/AndroidProjects/pragma/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.314" />

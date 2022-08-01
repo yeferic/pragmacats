@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="listItem"
+            type="com.yeferic.pragmacats.domain.model.Breed" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/cardview_corner_radius"
+        app:cardElevation="@dimen/cardview_elevation"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardview_height">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/cardview_padding">
+
+        <TextView
+            android:id="@+id/tvBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Name: ` + listItem.name}"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Origin: ` +listItem.origin}"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Ingelligence: ` + String.valueOf(listItem.intelligence)}"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgBreed"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintTop_toBottomOf="@+id/tvBreed"
+            bind:layout_constraintBottom_toTopOf="@+id/tvMore">
+
+        </ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

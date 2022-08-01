@@ -9,12 +9,13 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".BreedCatsApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PragmaCats"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.catbreeds.screens.CatBreedsView"
+            android:name=".presentation.catbreeds.screens.CatBreedsMainView"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
@@ -28,5 +29,5 @@
             </intent-filter>
         </activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

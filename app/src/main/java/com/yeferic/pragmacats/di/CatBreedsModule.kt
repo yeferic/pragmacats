@@ -3,6 +3,7 @@ package com.yeferic.pragmacats.di
 import com.yeferic.pragmacats.common.Constants
 import com.yeferic.pragmacats.data.repository.CatsBreedsRepositoryImp
 import com.yeferic.pragmacats.data.source.remote.RemoteService
+import com.yeferic.pragmacats.domain.respository.CatsBreedsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -58,7 +59,7 @@ class CatBreedsModule {
 
     @Provides
     @Singleton
-    fun providesCatsBreedsRepositoryImp(remoteService: RemoteService): CatsBreedsRepositoryImp{
+    fun providesCatsBreedsRepository(remoteService: RemoteService): CatsBreedsRepository {
         return CatsBreedsRepositoryImp(remoteService)
     }
 
